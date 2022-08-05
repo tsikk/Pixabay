@@ -46,10 +46,11 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(photo: Hits(id: 1,
-                             webformatURL: "https://pixabay.com/get/g21ad1e89422f9c6c7e92d5866a437c57398114e999dc197a4ae1d5da882ef515c26dc26d872f30a466158660f28eb6f0165bc60d0d9ba91b268ad044caaa0040_640.jpg",
-                             downloads: 1,
-                             user: "matthiasboeckel",
-                             userImageURL: "https://cdn.pixabay.com/user/2022/04/12/06-48-11-19_250x250.jpg"))
+        CardView(photo:Hits(id: 1,
+                            webformatURL: "https://pixabay.com/get/g21ad1e89422f9c6c7e92d5866a437c57398114e999dc197a4ae1d5da882ef515c26dc26d872f30a466158660f28eb6f0165bc60d0d9ba91b268ad044caaa0040_640.jpg",
+                            user: "matthiasboeckel",
+                            userImageURL: "https://cdn.pixabay.com/user/2022/04/12/06-48-11-19_250x250.jpg",
+                            largeImageURL: "", tags: "", imageWidth: 0, imageHeight: 0,
+                            views: 0, likes: 0, collections: 0, downloads: 0))
     }
 }

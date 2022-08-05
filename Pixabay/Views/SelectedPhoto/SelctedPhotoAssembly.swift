@@ -15,7 +15,6 @@ struct SelectedPhotoAssembly {
         let view = SelectedPhotoContentView(viewModel: viewModel)
         let controller = BaseViewController<SelectedPhotoViewModel, SelectedPhotoContentView>(rootView: view)
         controller.viewModel = viewModel
-        controller.title = "Photo"
         return controller
     }
     
