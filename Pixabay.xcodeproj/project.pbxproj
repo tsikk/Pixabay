@@ -30,6 +30,8 @@
 		DC78EA30289D7A1300C86F14 /* SelctedPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA2F289D7A1300C86F14 /* SelctedPhotoViewModel.swift */; };
 		DC78EA32289D7A2100C86F14 /* SelctedPhotoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA31289D7A2100C86F14 /* SelctedPhotoAssembly.swift */; };
 		DC78EA34289D7A2C00C86F14 /* SelectedPhotoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA33289D7A2C00C86F14 /* SelectedPhotoContentView.swift */; };
+		DC78EA37289D903800C86F14 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA36289D903800C86F14 /* CardView.swift */; };
+		DC78EA3A289D906F00C86F14 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC78EA39289D906F00C86F14 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,7 @@
 		DC78EA2F289D7A1300C86F14 /* SelctedPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelctedPhotoViewModel.swift; sourceTree = "<group>"; };
 		DC78EA31289D7A2100C86F14 /* SelctedPhotoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelctedPhotoAssembly.swift; sourceTree = "<group>"; };
 		DC78EA33289D7A2C00C86F14 /* SelectedPhotoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPhotoContentView.swift; sourceTree = "<group>"; };
+		DC78EA36289D903800C86F14 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC78EA3A289D906F00C86F14 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +119,7 @@
 		DC78EA02289D55FD00C86F14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DC78EA35289D902B00C86F14 /* CardView */,
 				DC78EA2E289D79FC00C86F14 /* SelectedPhoto */,
 				DC78EA16289D5A2800C86F14 /* Gallery */,
 			);
@@ -190,6 +195,14 @@
 			path = SelectedPhoto;
 			sourceTree = "<group>";
 		};
+		DC78EA35289D902B00C86F14 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA36289D903800C86F14 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,6 +219,9 @@
 			dependencies = (
 			);
 			name = Pixabay;
+			packageProductDependencies = (
+				DC78EA39289D906F00C86F14 /* Kingfisher */,
+			);
 			productName = Pixabay;
 			productReference = DC78E9EA289D4F8E00C86F14 /* Pixabay.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +250,9 @@
 				Base,
 			);
 			mainGroup = DC78E9E1289D4F8E00C86F14;
+			packageReferences = (
+				DC78EA38289D906F00C86F14 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DC78E9EB289D4F8E00C86F14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +299,7 @@
 				DC78EA12289D56C900C86F14 /* ViewModeling.swift in Sources */,
 				DC78EA0E289D56A800C86F14 /* BaseViewModel.swift in Sources */,
 				DC78EA06289D565B00C86F14 /* RootViewController.swift in Sources */,
+				DC78EA37289D903800C86F14 /* CardView.swift in Sources */,
 				DC78E9F0289D4F8E00C86F14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +508,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC78EA38289D906F00C86F14 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC78EA39289D906F00C86F14 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC78EA38289D906F00C86F14 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC78E9E2289D4F8E00C86F14 /* Project object */;
 }
