@@ -32,6 +32,12 @@
 		DC78EA34289D7A2C00C86F14 /* SelectedPhotoContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA33289D7A2C00C86F14 /* SelectedPhotoContentView.swift */; };
 		DC78EA37289D903800C86F14 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA36289D903800C86F14 /* CardView.swift */; };
 		DC78EA3A289D906F00C86F14 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC78EA39289D906F00C86F14 /* Kingfisher */; };
+		DC78EA40289DB98200C86F14 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA3F289DB98200C86F14 /* RegistrationViewModel.swift */; };
+		DC78EA42289DB98B00C86F14 /* RegistrationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA41289DB98B00C86F14 /* RegistrationAssembly.swift */; };
+		DC78EA44289DB99700C86F14 /* RegistrationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA43289DB99700C86F14 /* RegistrationContentView.swift */; };
+		DC78EA46289DB9A300C86F14 /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA45289DB9A300C86F14 /* LoginContentView.swift */; };
+		DC78EA48289DB9AB00C86F14 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA47289DB9AB00C86F14 /* LoginViewModel.swift */; };
+		DC78EA4A289DB9B300C86F14 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA49289DB9B300C86F14 /* LoginAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +67,12 @@
 		DC78EA31289D7A2100C86F14 /* SelctedPhotoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelctedPhotoAssembly.swift; sourceTree = "<group>"; };
 		DC78EA33289D7A2C00C86F14 /* SelectedPhotoContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPhotoContentView.swift; sourceTree = "<group>"; };
 		DC78EA36289D903800C86F14 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DC78EA3F289DB98200C86F14 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		DC78EA41289DB98B00C86F14 /* RegistrationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAssembly.swift; sourceTree = "<group>"; };
+		DC78EA43289DB99700C86F14 /* RegistrationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationContentView.swift; sourceTree = "<group>"; };
+		DC78EA45289DB9A300C86F14 /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
+		DC78EA47289DB9AB00C86F14 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		DC78EA49289DB9B300C86F14 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +131,8 @@
 		DC78EA02289D55FD00C86F14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC78EA16289D5A2800C86F14 /* Gallery */,
-				DC78EA2E289D79FC00C86F14 /* SelectedPhoto */,
+				DC78EA3C289DB58B00C86F14 /* Authorization */,
+				DC78EA3B289DB58000C86F14 /* Main */,
 				DC78EA35289D902B00C86F14 /* CardView */,
 			);
 			path = Views;
@@ -201,6 +213,44 @@
 				DC78EA36289D903800C86F14 /* CardView.swift */,
 			);
 			path = CardView;
+			sourceTree = "<group>";
+		};
+		DC78EA3B289DB58000C86F14 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA2E289D79FC00C86F14 /* SelectedPhoto */,
+				DC78EA16289D5A2800C86F14 /* Gallery */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DC78EA3C289DB58B00C86F14 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA3E289DB59D00C86F14 /* Registration */,
+				DC78EA3D289DB59500C86F14 /* LogIn */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		DC78EA3D289DB59500C86F14 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA45289DB9A300C86F14 /* LoginContentView.swift */,
+				DC78EA47289DB9AB00C86F14 /* LoginViewModel.swift */,
+				DC78EA49289DB9B300C86F14 /* LoginAssembly.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		DC78EA3E289DB59D00C86F14 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA3F289DB98200C86F14 /* RegistrationViewModel.swift */,
+				DC78EA41289DB98B00C86F14 /* RegistrationAssembly.swift */,
+				DC78EA43289DB99700C86F14 /* RegistrationContentView.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,19 +337,25 @@
 				DC78EA23289D5BF400C86F14 /* Endpoint.swift in Sources */,
 				DC78EA27289D5F2200C86F14 /* GalleryService.swift in Sources */,
 				DC78EA34289D7A2C00C86F14 /* SelectedPhotoContentView.swift in Sources */,
+				DC78EA48289DB9AB00C86F14 /* LoginViewModel.swift in Sources */,
+				DC78EA42289DB98B00C86F14 /* RegistrationAssembly.swift in Sources */,
 				DC78EA30289D7A1300C86F14 /* SelctedPhotoViewModel.swift in Sources */,
 				DC78EA1F289D5A6900C86F14 /* GalleryAssembly.swift in Sources */,
 				DC78EA0A289D566C00C86F14 /* RootAssembly.swift in Sources */,
 				DC78E9EE289D4F8E00C86F14 /* AppDelegate.swift in Sources */,
 				DC78EA29289D613F00C86F14 /* GalleryModel.swift in Sources */,
+				DC78EA40289DB98200C86F14 /* RegistrationViewModel.swift in Sources */,
 				DC78EA18289D5A3900C86F14 /* GalleryContentView.swift in Sources */,
+				DC78EA44289DB99700C86F14 /* RegistrationContentView.swift in Sources */,
 				DC78EA1D289D5A5400C86F14 /* GalleryRouter.swift in Sources */,
+				DC78EA4A289DB9B300C86F14 /* LoginAssembly.swift in Sources */,
 				DC78EA10289D56B300C86F14 /* BaseViewController.swift in Sources */,
 				DC78EA32289D7A2100C86F14 /* SelctedPhotoAssembly.swift in Sources */,
 				DC78EA12289D56C900C86F14 /* ViewModeling.swift in Sources */,
 				DC78EA0E289D56A800C86F14 /* BaseViewModel.swift in Sources */,
 				DC78EA06289D565B00C86F14 /* RootViewController.swift in Sources */,
 				DC78EA37289D903800C86F14 /* CardView.swift in Sources */,
+				DC78EA46289DB9A300C86F14 /* LoginContentView.swift in Sources */,
 				DC78E9F0289D4F8E00C86F14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
