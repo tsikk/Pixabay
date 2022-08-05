@@ -38,6 +38,9 @@
 		DC78EA46289DB9A300C86F14 /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA45289DB9A300C86F14 /* LoginContentView.swift */; };
 		DC78EA48289DB9AB00C86F14 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA47289DB9AB00C86F14 /* LoginViewModel.swift */; };
 		DC78EA4A289DB9B300C86F14 /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA49289DB9B300C86F14 /* LoginAssembly.swift */; };
+		DC78EA4C289DCC2500C86F14 /* ButtonStyle+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA4B289DCC2500C86F14 /* ButtonStyle+Helper.swift */; };
+		DC78EA4E289DCC3E00C86F14 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA4D289DCC3E00C86F14 /* ViewModifier.swift */; };
+		DC78EA50289DCC5D00C86F14 /* Textfield+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA4F289DCC5D00C86F14 /* Textfield+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		DC78EA45289DB9A300C86F14 /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
 		DC78EA47289DB9AB00C86F14 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		DC78EA49289DB9B300C86F14 /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		DC78EA4B289DCC2500C86F14 /* ButtonStyle+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Helper.swift"; sourceTree = "<group>"; };
+		DC78EA4D289DCC3E00C86F14 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		DC78EA4F289DCC5D00C86F14 /* Textfield+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				DC78EA14289D589F00C86F14 /* UIViewController+Helper.swift */,
+				DC78EA4B289DCC2500C86F14 /* ButtonStyle+Helper.swift */,
+				DC78EA4D289DCC3E00C86F14 /* ViewModifier.swift */,
+				DC78EA4F289DCC5D00C86F14 /* Textfield+Helper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -333,6 +342,7 @@
 				DC78EA1B289D5A4C00C86F14 /* GalleryViewModel.swift in Sources */,
 				DC78EA0C289D568600C86F14 /* BaseRouting.swift in Sources */,
 				DC78EA25289D5EA300C86F14 /* Networking.swift in Sources */,
+				DC78EA4C289DCC2500C86F14 /* ButtonStyle+Helper.swift in Sources */,
 				DC78EA08289D566100C86F14 /* RootViewModel.swift in Sources */,
 				DC78EA23289D5BF400C86F14 /* Endpoint.swift in Sources */,
 				DC78EA27289D5F2200C86F14 /* GalleryService.swift in Sources */,
@@ -341,7 +351,9 @@
 				DC78EA42289DB98B00C86F14 /* RegistrationAssembly.swift in Sources */,
 				DC78EA30289D7A1300C86F14 /* SelctedPhotoViewModel.swift in Sources */,
 				DC78EA1F289D5A6900C86F14 /* GalleryAssembly.swift in Sources */,
+				DC78EA4E289DCC3E00C86F14 /* ViewModifier.swift in Sources */,
 				DC78EA0A289D566C00C86F14 /* RootAssembly.swift in Sources */,
+				DC78EA50289DCC5D00C86F14 /* Textfield+Helper.swift in Sources */,
 				DC78E9EE289D4F8E00C86F14 /* AppDelegate.swift in Sources */,
 				DC78EA29289D613F00C86F14 /* GalleryModel.swift in Sources */,
 				DC78EA40289DB98200C86F14 /* RegistrationViewModel.swift in Sources */,
