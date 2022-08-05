@@ -60,6 +60,7 @@ struct SelectedPhotoContentView: View {
                     Text("Added to Favourites \(viewModel.data.collections) times")
                 }
             }
+            .mask(RoundedRectangle(cornerRadius: 16))
             
         }
     }
