@@ -54,14 +54,30 @@
 		DC78E9EC289D4F8E00C86F14 /* Pixabay */ = {
 			isa = PBXGroup;
 			children = (
-				DC78E9ED289D4F8E00C86F14 /* AppDelegate.swift */,
-				DC78E9EF289D4F8E00C86F14 /* SceneDelegate.swift */,
-				DC78E9F1289D4F8E00C86F14 /* ViewController.swift */,
-				DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */,
-				DC78E9F8289D4F8F00C86F14 /* LaunchScreen.storyboard */,
+				DC78EA02289D55FD00C86F14 /* Views */,
+				DC78EA01289D55F100C86F14 /* App */,
 				DC78E9FB289D4F8F00C86F14 /* Info.plist */,
 			);
 			path = Pixabay;
+			sourceTree = "<group>";
+		};
+		DC78EA01289D55F100C86F14 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DC78E9ED289D4F8E00C86F14 /* AppDelegate.swift */,
+				DC78E9EF289D4F8E00C86F14 /* SceneDelegate.swift */,
+				DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */,
+				DC78E9F8289D4F8F00C86F14 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DC78EA02289D55FD00C86F14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC78E9F1289D4F8E00C86F14 /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
