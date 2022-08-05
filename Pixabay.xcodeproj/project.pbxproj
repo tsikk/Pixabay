@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DC78E9EE289D4F8E00C86F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E9ED289D4F8E00C86F14 /* AppDelegate.swift */; };
 		DC78E9F0289D4F8E00C86F14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E9EF289D4F8E00C86F14 /* SceneDelegate.swift */; };
-		DC78E9F2289D4F8E00C86F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E9F1289D4F8E00C86F14 /* ViewController.swift */; };
 		DC78E9F7289D4F8F00C86F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */; };
 		DC78E9FA289D4F8F00C86F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC78E9F8289D4F8F00C86F14 /* LaunchScreen.storyboard */; };
 		DC78EA06289D565B00C86F14 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA05289D565B00C86F14 /* RootViewController.swift */; };
@@ -20,13 +19,21 @@
 		DC78EA10289D56B300C86F14 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA0F289D56B300C86F14 /* BaseViewController.swift */; };
 		DC78EA12289D56C900C86F14 /* ViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA11289D56C900C86F14 /* ViewModeling.swift */; };
 		DC78EA15289D589F00C86F14 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA14289D589F00C86F14 /* UIViewController+Helper.swift */; };
+		DC78EA18289D5A3900C86F14 /* GalleryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA17289D5A3900C86F14 /* GalleryContentView.swift */; };
+		DC78EA1B289D5A4C00C86F14 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA1A289D5A4C00C86F14 /* GalleryViewModel.swift */; };
+		DC78EA1D289D5A5400C86F14 /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA1C289D5A5400C86F14 /* GalleryRouter.swift */; };
+		DC78EA1F289D5A6900C86F14 /* GalleryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA1E289D5A6900C86F14 /* GalleryAssembly.swift */; };
+		DC78EA23289D5BF400C86F14 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA22289D5BF400C86F14 /* Endpoint.swift */; };
+		DC78EA25289D5EA300C86F14 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA24289D5EA300C86F14 /* Networking.swift */; };
+		DC78EA27289D5F2200C86F14 /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA26289D5F2200C86F14 /* GalleryService.swift */; };
+		DC78EA29289D613F00C86F14 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA28289D613F00C86F14 /* GalleryModel.swift */; };
+		DC78EA2B289D617700C86F14 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA2A289D617700C86F14 /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC78E9EA289D4F8E00C86F14 /* Pixabay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pixabay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC78E9ED289D4F8E00C86F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC78E9EF289D4F8E00C86F14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DC78E9F1289D4F8E00C86F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC78E9F9289D4F8F00C86F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC78E9FB289D4F8F00C86F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +45,15 @@
 		DC78EA0F289D56B300C86F14 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DC78EA11289D56C900C86F14 /* ViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModeling.swift; sourceTree = "<group>"; };
 		DC78EA14289D589F00C86F14 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
+		DC78EA17289D5A3900C86F14 /* GalleryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryContentView.swift; sourceTree = "<group>"; };
+		DC78EA1A289D5A4C00C86F14 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		DC78EA1C289D5A5400C86F14 /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
+		DC78EA1E289D5A6900C86F14 /* GalleryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryAssembly.swift; sourceTree = "<group>"; };
+		DC78EA22289D5BF400C86F14 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		DC78EA24289D5EA300C86F14 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		DC78EA26289D5F2200C86F14 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
+		DC78EA28289D613F00C86F14 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
+		DC78EA2A289D617700C86F14 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +86,12 @@
 		DC78E9EC289D4F8E00C86F14 /* Pixabay */ = {
 			isa = PBXGroup;
 			children = (
-				DC78EA13289D589200C86F14 /* Helper */,
-				DC78EA03289D561E00C86F14 /* Base */,
-				DC78EA02289D55FD00C86F14 /* Views */,
 				DC78EA01289D55F100C86F14 /* App */,
+				DC78EA03289D561E00C86F14 /* Base */,
+				DC78EA20289D5A8500C86F14 /* Network */,
+				DC78EA21289D5B4F00C86F14 /* Model */,
+				DC78EA02289D55FD00C86F14 /* Views */,
+				DC78EA13289D589200C86F14 /* Helper */,
 				DC78E9FB289D4F8F00C86F14 /* Info.plist */,
 			);
 			path = Pixabay;
@@ -84,6 +102,7 @@
 			children = (
 				DC78E9ED289D4F8E00C86F14 /* AppDelegate.swift */,
 				DC78E9EF289D4F8E00C86F14 /* SceneDelegate.swift */,
+				DC78EA2A289D617700C86F14 /* GalleryViewController.swift */,
 				DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */,
 				DC78E9F8289D4F8F00C86F14 /* LaunchScreen.storyboard */,
 			);
@@ -93,7 +112,7 @@
 		DC78EA02289D55FD00C86F14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC78E9F1289D4F8E00C86F14 /* ViewController.swift */,
+				DC78EA16289D5A2800C86F14 /* Gallery */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +145,35 @@
 				DC78EA14289D589F00C86F14 /* UIViewController+Helper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		DC78EA16289D5A2800C86F14 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA17289D5A3900C86F14 /* GalleryContentView.swift */,
+				DC78EA1A289D5A4C00C86F14 /* GalleryViewModel.swift */,
+				DC78EA1C289D5A5400C86F14 /* GalleryRouter.swift */,
+				DC78EA1E289D5A6900C86F14 /* GalleryAssembly.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		DC78EA20289D5A8500C86F14 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA22289D5BF400C86F14 /* Endpoint.swift */,
+				DC78EA24289D5EA300C86F14 /* Networking.swift */,
+				DC78EA26289D5F2200C86F14 /* GalleryService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DC78EA21289D5B4F00C86F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA28289D613F00C86F14 /* GalleryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,11 +247,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC78EA15289D589F00C86F14 /* UIViewController+Helper.swift in Sources */,
+				DC78EA1B289D5A4C00C86F14 /* GalleryViewModel.swift in Sources */,
 				DC78EA0C289D568600C86F14 /* BaseRouting.swift in Sources */,
+				DC78EA25289D5EA300C86F14 /* Networking.swift in Sources */,
 				DC78EA08289D566100C86F14 /* RootViewModel.swift in Sources */,
+				DC78EA2B289D617700C86F14 /* GalleryViewController.swift in Sources */,
+				DC78EA23289D5BF400C86F14 /* Endpoint.swift in Sources */,
+				DC78EA27289D5F2200C86F14 /* GalleryService.swift in Sources */,
+				DC78EA1F289D5A6900C86F14 /* GalleryAssembly.swift in Sources */,
 				DC78EA0A289D566C00C86F14 /* RootAssembly.swift in Sources */,
-				DC78E9F2289D4F8E00C86F14 /* ViewController.swift in Sources */,
 				DC78E9EE289D4F8E00C86F14 /* AppDelegate.swift in Sources */,
+				DC78EA29289D613F00C86F14 /* GalleryModel.swift in Sources */,
+				DC78EA18289D5A3900C86F14 /* GalleryContentView.swift in Sources */,
+				DC78EA1D289D5A5400C86F14 /* GalleryRouter.swift in Sources */,
 				DC78EA10289D56B300C86F14 /* BaseViewController.swift in Sources */,
 				DC78EA12289D56C900C86F14 /* ViewModeling.swift in Sources */,
 				DC78EA0E289D56A800C86F14 /* BaseViewModel.swift in Sources */,
