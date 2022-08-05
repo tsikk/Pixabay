@@ -16,10 +16,10 @@ struct GalleryContentView: View {
     
     private var listOfMovies: some View {
         List(viewModel.photos, id: \.self) { photo in
-                
-            Text("\(photo.downloads)")
+            CardView(photo: photo)
+                .listRowInsets(EdgeInsets())
+                .listRowSeparator(.hidden)
                 .onTapGesture {
-                    print("TAPPED: \(photo.downloads)")
                     viewModel.selectPhoto(with: photo.id)
                 }
         }
