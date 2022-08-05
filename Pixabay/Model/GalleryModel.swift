@@ -14,7 +14,14 @@ struct Gallery: Decodable, Hashable {
 struct Hits: Decodable, Hashable {
     let id: Int
     let webformatURL: String
-    let downloads: Int
     let user: String
     let userImageURL: String
+    let largeImageURL: String
+    let tags: String
+    let imageWidth: Int
+    let imageHeight: Int
+    let views: Int
+    let likes: Int
+    let collections: Int
+    let downloads: Int
 }

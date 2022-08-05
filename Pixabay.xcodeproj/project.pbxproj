@@ -119,9 +119,9 @@
 		DC78EA02289D55FD00C86F14 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC78EA35289D902B00C86F14 /* CardView */,
-				DC78EA2E289D79FC00C86F14 /* SelectedPhoto */,
 				DC78EA16289D5A2800C86F14 /* Gallery */,
+				DC78EA2E289D79FC00C86F14 /* SelectedPhoto */,
+				DC78EA35289D902B00C86F14 /* CardView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
