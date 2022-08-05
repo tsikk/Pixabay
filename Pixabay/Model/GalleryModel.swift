@@ -13,6 +13,8 @@ struct Gallery: Decodable, Hashable {
 
 struct Hits: Decodable, Hashable {
     let id: Int
-    let pageURL: String
+    let webformatURL: String
     let downloads: Int
+    let user: String
+    let userImageURL: String
 }
