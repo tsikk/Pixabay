@@ -12,6 +12,13 @@
 		DC78E9F2289D4F8E00C86F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E9F1289D4F8E00C86F14 /* ViewController.swift */; };
 		DC78E9F7289D4F8F00C86F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */; };
 		DC78E9FA289D4F8F00C86F14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC78E9F8289D4F8F00C86F14 /* LaunchScreen.storyboard */; };
+		DC78EA06289D565B00C86F14 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA05289D565B00C86F14 /* RootViewController.swift */; };
+		DC78EA08289D566100C86F14 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA07289D566100C86F14 /* RootViewModel.swift */; };
+		DC78EA0A289D566C00C86F14 /* RootAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA09289D566C00C86F14 /* RootAssembly.swift */; };
+		DC78EA0C289D568600C86F14 /* BaseRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA0B289D568600C86F14 /* BaseRouting.swift */; };
+		DC78EA0E289D56A800C86F14 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA0D289D56A800C86F14 /* BaseViewModel.swift */; };
+		DC78EA10289D56B300C86F14 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA0F289D56B300C86F14 /* BaseViewController.swift */; };
+		DC78EA12289D56C900C86F14 /* ViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA11289D56C900C86F14 /* ViewModeling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC78E9F9289D4F8F00C86F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC78E9FB289D4F8F00C86F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC78EA05289D565B00C86F14 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		DC78EA07289D566100C86F14 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		DC78EA09289D566C00C86F14 /* RootAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAssembly.swift; sourceTree = "<group>"; };
+		DC78EA0B289D568600C86F14 /* BaseRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouting.swift; sourceTree = "<group>"; };
+		DC78EA0D289D56A800C86F14 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		DC78EA0F289D56B300C86F14 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DC78EA11289D56C900C86F14 /* ViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModeling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 		DC78E9EC289D4F8E00C86F14 /* Pixabay */ = {
 			isa = PBXGroup;
 			children = (
+				DC78EA03289D561E00C86F14 /* Base */,
 				DC78EA02289D55FD00C86F14 /* Views */,
 				DC78EA01289D55F100C86F14 /* App */,
 				DC78E9FB289D4F8F00C86F14 /* Info.plist */,
@@ -78,6 +93,28 @@
 				DC78E9F1289D4F8E00C86F14 /* ViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DC78EA03289D561E00C86F14 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA0B289D568600C86F14 /* BaseRouting.swift */,
+				DC78EA0D289D56A800C86F14 /* BaseViewModel.swift */,
+				DC78EA0F289D56B300C86F14 /* BaseViewController.swift */,
+				DC78EA11289D56C900C86F14 /* ViewModeling.swift */,
+				DC78EA04289D564E00C86F14 /* Root */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DC78EA04289D564E00C86F14 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA05289D565B00C86F14 /* RootViewController.swift */,
+				DC78EA07289D566100C86F14 /* RootViewModel.swift */,
+				DC78EA09289D566C00C86F14 /* RootAssembly.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +187,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC78EA0C289D568600C86F14 /* BaseRouting.swift in Sources */,
+				DC78EA08289D566100C86F14 /* RootViewModel.swift in Sources */,
+				DC78EA0A289D566C00C86F14 /* RootAssembly.swift in Sources */,
 				DC78E9F2289D4F8E00C86F14 /* ViewController.swift in Sources */,
 				DC78E9EE289D4F8E00C86F14 /* AppDelegate.swift in Sources */,
+				DC78EA10289D56B300C86F14 /* BaseViewController.swift in Sources */,
+				DC78EA12289D56C900C86F14 /* ViewModeling.swift in Sources */,
+				DC78EA0E289D56A800C86F14 /* BaseViewModel.swift in Sources */,
+				DC78EA06289D565B00C86F14 /* RootViewController.swift in Sources */,
 				DC78E9F0289D4F8E00C86F14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
