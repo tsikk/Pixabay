@@ -45,6 +45,6 @@ class GalleryViewModel: BaseViewModel {
 
     func selectPhoto(with id: Int) {
         let selectedPhoto = photos.filter { $0.id == id }
-        router.openSelectedPhoto(with: selectedPhoto.first ?? Hits(id: 0, pageURL: "0", downloads: 0))
+        router.openSelectedPhoto(with: selectedPhoto.first ?? Hits(id: 0, webformatURL: "", downloads: 0, user: "", userImageURL: ""))
     }
 }

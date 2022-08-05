@@ -13,7 +13,7 @@ struct SelectedPhotoContentView: View {
     var body: some View {
         Text("\(viewModel.data.id)")
         Text("\(viewModel.data.downloads)")
-        Text("\(viewModel.data.pageURL)")
+        Text("\(viewModel.data.webformatURL)")
     }
 }
 
