@@ -18,6 +18,9 @@ struct GalleryContentView: View {
         List(viewModel.photos, id: \.self) { photo in
                 
             Text("\(photo.downloads)")
+                .onTapGesture {
+                    print("TAPPED: \(photo.downloads)")
+                }
         }
         .listStyle(.plain)
     }

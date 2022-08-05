@@ -17,4 +17,13 @@ extension UIViewController {
             .filter({$0.isKeyWindow}).first
     }
     
+    var wrapped: UIViewController {
+        let navigationController = UINavigationController(rootViewController: self)
+        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.isTranslucent = true
+        
+        return navigationController
+    }
+    
 }

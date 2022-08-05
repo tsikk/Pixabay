@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: windowScene)
 
-        window.rootViewController = GalleryAssembly.build()
+        window.rootViewController = GalleryAssembly.build().wrapped
         self.window = window
         window.makeKeyAndVisible()
     }
