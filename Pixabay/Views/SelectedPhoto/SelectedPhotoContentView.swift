@@ -13,7 +13,7 @@ struct SelectedPhotoContentView: View {
     
     var body: some View {
      
-        VStack(spacing: 8) {
+        VStack {
             ZStack(alignment: .bottom) {
                 KFImage(URL(string: viewModel.data.largeImageURL))
                     .placeholder {
@@ -38,8 +38,7 @@ struct SelectedPhotoContentView: View {
             }
             .background(.thickMaterial)
             .mask(RoundedRectangle(cornerRadius: 16))
-            .padding(8)
-            
+
             List {
                 HStack {
                     Image(systemName: "eye.circle")
