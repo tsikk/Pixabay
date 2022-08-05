@@ -14,8 +14,8 @@ protocol BaseRouting {
     var topNavigationController: UINavigationController? { get }
     var topTabBarController: UITabBarController? { get }
     var tabTopNavigationController: UINavigationController? { get }
-    func show(_ viewController: UIViewController, on tab: Tabs)
-    func present(_ viewControllerToPresent: UIViewController, on tab: Tabs, animated: Bool, completion: (() -> Void)?)
+    func show(_ viewController: UIViewController)
+    func present(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
 }
 
 extension BaseRouting {
@@ -49,26 +49,13 @@ extension BaseRouting {
         rootController as? UINavigationController
     }
 
-    var topTabBarController: UITabBarController? {
-        rootController as? UITabBarController
-    }
-
-    var tabTopNavigationController: UINavigationController? {
-        topTabBarController?.selectedViewController as? UINavigationController
-    }
-
-    func show(_ viewController: UIViewController, on tab: Tabs) {
-        let rootController = topTabBarController?.viewControllers?[tab.rawValue]
-
+    func show(_ viewController: UIViewController) {
+        let rootController = topViewController
         rootController?.show(viewController, sender: nil)
-        topTabBarController?.selectedIndex = tab.rawValue
     }
 
-    func present(_ viewControllerToPresent: UIViewController, on tab: Tabs, animated: Bool, completion: (() -> Void)?) {
-        let rootController = topTabBarController?.viewControllers?[tab.rawValue] as? UINavigationController
-        let presentationController = rootController?.viewControllers.last
-
+    func present(_ viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?) {
+        let presentationController = topViewController
         presentationController?.present(viewControllerToPresent, animated: animated, completion: completion)
-        topTabBarController?.selectedIndex = tab.rawValue
     }
 }

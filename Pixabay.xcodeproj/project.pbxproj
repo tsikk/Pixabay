@@ -19,6 +19,7 @@
 		DC78EA0E289D56A800C86F14 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA0D289D56A800C86F14 /* BaseViewModel.swift */; };
 		DC78EA10289D56B300C86F14 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA0F289D56B300C86F14 /* BaseViewController.swift */; };
 		DC78EA12289D56C900C86F14 /* ViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA11289D56C900C86F14 /* ViewModeling.swift */; };
+		DC78EA15289D589F00C86F14 /* UIViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA14289D589F00C86F14 /* UIViewController+Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DC78EA0D289D56A800C86F14 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		DC78EA0F289D56B300C86F14 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DC78EA11289D56C900C86F14 /* ViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModeling.swift; sourceTree = "<group>"; };
+		DC78EA14289D589F00C86F14 /* UIViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helper.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		DC78E9EC289D4F8E00C86F14 /* Pixabay */ = {
 			isa = PBXGroup;
 			children = (
+				DC78EA13289D589200C86F14 /* Helper */,
 				DC78EA03289D561E00C86F14 /* Base */,
 				DC78EA02289D55FD00C86F14 /* Views */,
 				DC78EA01289D55F100C86F14 /* App */,
@@ -115,6 +118,14 @@
 				DC78EA09289D566C00C86F14 /* RootAssembly.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		DC78EA13289D589200C86F14 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DC78EA14289D589F00C86F14 /* UIViewController+Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC78EA15289D589F00C86F14 /* UIViewController+Helper.swift in Sources */,
 				DC78EA0C289D568600C86F14 /* BaseRouting.swift in Sources */,
 				DC78EA08289D566100C86F14 /* RootViewModel.swift in Sources */,
 				DC78EA0A289D566C00C86F14 /* RootAssembly.swift in Sources */,
