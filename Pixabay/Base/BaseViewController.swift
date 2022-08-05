@@ -10,7 +10,6 @@ import SwiftUI
 class BaseViewController<ViewModelType: ViewModeling, ViewType: View>: UIHostingController<ViewType> {
 
     weak var viewModel: ViewModelType!
-    override var navigationController: UINavigationController? { nil }
 
     override init(rootView: ViewType) {
         super.init(rootView: rootView)
