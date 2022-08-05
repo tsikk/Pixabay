@@ -8,7 +8,6 @@
 import Foundation
 
 struct Gallery: Decodable, Hashable {
-    let total: Int
     let hits: [Hits]
 }
 

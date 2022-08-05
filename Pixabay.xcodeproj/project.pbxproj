@@ -27,7 +27,6 @@
 		DC78EA25289D5EA300C86F14 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA24289D5EA300C86F14 /* Networking.swift */; };
 		DC78EA27289D5F2200C86F14 /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA26289D5F2200C86F14 /* GalleryService.swift */; };
 		DC78EA29289D613F00C86F14 /* GalleryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA28289D613F00C86F14 /* GalleryModel.swift */; };
-		DC78EA2B289D617700C86F14 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA2A289D617700C86F14 /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +52,6 @@
 		DC78EA24289D5EA300C86F14 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		DC78EA26289D5F2200C86F14 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
 		DC78EA28289D613F00C86F14 /* GalleryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryModel.swift; sourceTree = "<group>"; };
-		DC78EA2A289D617700C86F14 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +100,6 @@
 			children = (
 				DC78E9ED289D4F8E00C86F14 /* AppDelegate.swift */,
 				DC78E9EF289D4F8E00C86F14 /* SceneDelegate.swift */,
-				DC78EA2A289D617700C86F14 /* GalleryViewController.swift */,
 				DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */,
 				DC78E9F8289D4F8F00C86F14 /* LaunchScreen.storyboard */,
 			);
@@ -251,7 +248,6 @@
 				DC78EA0C289D568600C86F14 /* BaseRouting.swift in Sources */,
 				DC78EA25289D5EA300C86F14 /* Networking.swift in Sources */,
 				DC78EA08289D566100C86F14 /* RootViewModel.swift in Sources */,
-				DC78EA2B289D617700C86F14 /* GalleryViewController.swift in Sources */,
 				DC78EA23289D5BF400C86F14 /* Endpoint.swift in Sources */,
 				DC78EA27289D5F2200C86F14 /* GalleryService.swift in Sources */,
 				DC78EA1F289D5A6900C86F14 /* GalleryAssembly.swift in Sources */,
