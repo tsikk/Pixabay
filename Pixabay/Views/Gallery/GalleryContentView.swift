@@ -20,6 +20,7 @@ struct GalleryContentView: View {
             Text("\(photo.downloads)")
                 .onTapGesture {
                     print("TAPPED: \(photo.downloads)")
+                    viewModel.selectPhoto(with: photo.id)
                 }
         }
         .listStyle(.plain)

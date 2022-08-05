@@ -13,6 +13,7 @@ class GalleryViewModel: BaseViewModel {
     @Published var photos = [Hits]()
     private let service: GalleryService
     private var subscriptions = Set<AnyCancellable>()
+    private let router = GalleryRouter()
 
     init(service: GalleryService) {
         self.service = service
@@ -42,4 +43,8 @@ class GalleryViewModel: BaseViewModel {
         
     }
 
+    func selectPhoto(with id: Int) {
+        let selectedPhoto = photos.filter { $0.id == id }
+        router.openSelectedPhoto(with: selectedPhoto.first ?? Hits(id: 0, pageURL: "0", downloads: 0))
+    }
 }
