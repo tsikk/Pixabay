@@ -8,8 +8,52 @@
 import SwiftUI
 
 struct RegistrationContentView: View {
+    @State private var mail: String = ""
+    @State private var password: String = ""
+    @State private var age: String = ""
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack(spacing: 32) {
+            
+            Spacer()
+            
+            SuperTextField(placeholder: Text("Enter your mail"), text: $mail)
+                .foregroundColor(.white)
+                .accentColor(.white)
+                .modifier(customViewModifier(roundedCornes: 6,
+                                             startColor: .black,
+                                             endColor: .white,
+                                             textColor: .white))
+            
+            SuperTextField(placeholder: Text("Enter your age"), text: $age)
+                .foregroundColor(.white)
+                .accentColor(.white)
+                .modifier(customViewModifier(roundedCornes: 6,
+                                             startColor: .black,
+                                             endColor: .white,
+                                             textColor: .white))
+            
+            
+            SuperTextField(placeholder: Text("Enter your password"), text: $password)
+                .foregroundColor(.white)
+                .accentColor(.white)
+                .modifier(customViewModifier(roundedCornes: 6,
+                                             startColor: .black,
+                                             endColor: .white,
+                                             textColor: .white))
+            
+            
+
+            Button("Register") {
+                print("Tapped")
+            }
+            .buttonStyle(GrowingButton())
+            
+            Spacer()
+        }
+        .padding()
+        
     }
 }
 
