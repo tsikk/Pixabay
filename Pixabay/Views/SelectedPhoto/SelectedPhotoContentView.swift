@@ -6,14 +6,63 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct SelectedPhotoContentView: View {
     @ObservedObject var viewModel: SelectedPhotoViewModel
     
     var body: some View {
-        Text("\(viewModel.data.id)")
-        Text("\(viewModel.data.downloads)")
-        Text("\(viewModel.data.webformatURL)")
+     
+        VStack(spacing: 8) {
+            ZStack(alignment: .bottom) {
+                KFImage(URL(string: viewModel.data.largeImageURL))
+                    .placeholder {
+                        ProgressView()
+                    }
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(minWidth: 0, maxHeight: 400)
+                
+                HStack {
+                    Text(viewModel.data.tags)
+                        .bold()
+                    Spacer()
+                    
+                    HStack {
+                        Text("W:\(viewModel.data.imageWidth),")
+                        Text("H:\(viewModel.data.imageHeight)" )
+                    }
+                }
+                .padding()
+                .background(.thinMaterial)
+            }
+            .background(.thickMaterial)
+            .mask(RoundedRectangle(cornerRadius: 16))
+            .padding(8)
+            
+            List {
+                HStack {
+                    Image(systemName: "eye.circle")
+                    Text("Viewed \(viewModel.data.views) times")
+                }
+                
+                HStack {
+                    Image(systemName: "hand.thumbsup.circle")
+                    Text("Liked \(viewModel.data.likes) times")
+                }
+                
+                HStack {
+                    Image(systemName: "arrow.down.circle.fill")
+                    Text("Downloaded \(viewModel.data.downloads) times")
+                }
+                
+                HStack {
+                    Image(systemName: "star.circle")
+                    Text("Added to Favourites \(viewModel.data.collections) times")
+                }
+            }
+            
+        }
     }
 }
 
