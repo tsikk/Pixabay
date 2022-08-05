@@ -8,13 +8,23 @@
 import SwiftUI
 
 struct GalleryContentView: View {
+    @ObservedObject var viewModel: GalleryViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        listOfMovies
+    }
+    
+    private var listOfMovies: some View {
+        List(viewModel.photos, id: \.self) { photo in
+                
+            Text("\(photo.downloads)")
+        }
+        .listStyle(.plain)
     }
 }
 
 struct GalleryContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryContentView()
+        GalleryContentView(viewModel: GalleryViewModel())
     }
 }
