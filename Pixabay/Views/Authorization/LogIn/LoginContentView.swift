@@ -26,20 +26,24 @@ struct LoginContentView: View {
             VStack(spacing: 32) {
                 
                 SuperTextField(placeholder: Text("Enter your email"), text: $viewModel.email)
-                .foregroundColor(.white)
-                .accentColor(.white)
-                .modifier(customViewModifier(roundedCornes: 6,
-                                             startColor: .black,
-                                             endColor: .blue,
-                                             textColor: .white))
-
+                    .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
+                    .foregroundColor(.white)
+                    .accentColor(.white)
+                    .modifier(customViewModifier(roundedCornes: 6,
+                                                 startColor: .black,
+                                                 endColor: .blue,
+                                                 textColor: .white))
+                
                 SuperTextField(placeholder: Text("Enter your password"), text: $viewModel.password, isSecure: true)
-                .foregroundColor(.white)
-                .accentColor(.white)
-                .modifier(customViewModifier(roundedCornes: 6,
-                                             startColor: .black,
-                                             endColor: .yellow,
-                                             textColor: .white))
+                    .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
+                    .foregroundColor(.white)
+                    .accentColor(.white)
+                    .modifier(customViewModifier(roundedCornes: 6,
+                                                 startColor: .black,
+                                                 endColor: .yellow,
+                                                 textColor: .white))
 
             }
 

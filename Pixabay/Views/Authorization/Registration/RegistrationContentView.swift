@@ -19,6 +19,8 @@ struct RegistrationContentView: View {
             VStack(alignment: .leading) {
                 SuperTextField(placeholder: Text("Enter your mail"),
                                text: $viewModel.email)
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -35,6 +37,8 @@ struct RegistrationContentView: View {
             VStack(alignment: .leading) {
                 SuperTextField(placeholder: Text("Enter your age"),
                                text: $viewModel.age)
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -50,9 +54,11 @@ struct RegistrationContentView: View {
             
             
             VStack(alignment: .leading) {
-            SuperTextField(placeholder: Text("Enter your password"),
-                           text: $viewModel.password,
-                           isSecure: true)
+                SuperTextField(placeholder: Text("Enter your password"),
+                               text: $viewModel.password,
+                               isSecure: true)
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -68,9 +74,11 @@ struct RegistrationContentView: View {
             
             
             VStack(alignment: .leading) {
-            SuperTextField(placeholder: Text("Confirm yout password"),
-                           text: $viewModel.confirmPassword,
-                           isSecure: true)
+                SuperTextField(placeholder: Text("Confirm yout password"),
+                               text: $viewModel.confirmPassword,
+                               isSecure: true)
+                .textInputAutocapitalization(.never)
+                .disableAutocorrection(true)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
