@@ -69,6 +69,7 @@
 		DC78EA85289E57C000C86F14 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DC78EA84289E57C000C86F14 /* FirebaseRemoteConfigSwift */; };
 		DC78EA87289E57C000C86F14 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DC78EA86289E57C000C86F14 /* FirebaseStorage */; };
 		DC78EA89289E57C000C86F14 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DC78EA88289E57C000C86F14 /* FirebaseStorageCombine-Community */; };
+		DC78EA8B289E622000C86F14 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA8A289E622000C86F14 /* LoginRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		DC78EA4D289DCC3E00C86F14 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		DC78EA4F289DCC5D00C86F14 /* Textfield+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield+Helper.swift"; sourceTree = "<group>"; };
 		DC78EA51289E543C00C86F14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DC78EA8A289E622000C86F14 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +307,7 @@
 				DC78EA45289DB9A300C86F14 /* LoginContentView.swift */,
 				DC78EA47289DB9AB00C86F14 /* LoginViewModel.swift */,
 				DC78EA49289DB9B300C86F14 /* LoginAssembly.swift */,
+				DC78EA8A289E622000C86F14 /* LoginRouter.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				DC78EA25289D5EA300C86F14 /* Networking.swift in Sources */,
 				DC78EA4C289DCC2500C86F14 /* ButtonStyle+Helper.swift in Sources */,
 				DC78EA08289D566100C86F14 /* RootViewModel.swift in Sources */,
+				DC78EA8B289E622000C86F14 /* LoginRouter.swift in Sources */,
 				DC78EA23289D5BF400C86F14 /* Endpoint.swift in Sources */,
 				DC78EA27289D5F2200C86F14 /* GalleryService.swift in Sources */,
 				DC78EA34289D7A2C00C86F14 /* SelectedPhotoContentView.swift in Sources */,
