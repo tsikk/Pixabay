@@ -10,6 +10,7 @@ import SwiftUI
 struct RegistrationContentView: View {
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var confirmPassword: String = ""
     @State private var age: String = ""
     @ObservedObject var viewModel: RegistrationViewModel
 
@@ -19,31 +20,69 @@ struct RegistrationContentView: View {
             
             Spacer()
             
-            SuperTextField(placeholder: Text("Enter your mail"), text: $email)
+            VStack(alignment: .leading) {
+                SuperTextField(placeholder: Text("Enter your mail"),
+                               text: $email)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
                                              endColor: .blue,
                                              textColor: .white))
+                
+                Text("That is a prompt designed for somthing")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.caption)
+            }
             
-            SuperTextField(placeholder: Text("Enter your age"), text: $age)
+            VStack(alignment: .leading) {
+                SuperTextField(placeholder: Text("Enter your age"),
+                               text: $age)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
                                              endColor: .red,
                                              textColor: .white))
+                
+                Text("That is a prompt designed for somthing")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.caption)
+            }
             
             
-            SuperTextField(placeholder: Text("Enter your password"), text: $password)
+            VStack(alignment: .leading) {
+            SuperTextField(placeholder: Text("Enter your password"),
+                           text: $password,
+                           isSecure: true)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
                                              endColor: .yellow,
                                              textColor: .white))
+                
+                Text("That is a prompt designed for somthing")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.caption)
+            }
             
+            
+            VStack(alignment: .leading) {
+            SuperTextField(placeholder: Text("Confirm yout password"),
+                           text: $confirmPassword,
+                           isSecure: true)
+                .foregroundColor(.white)
+                .accentColor(.white)
+                .modifier(customViewModifier(roundedCornes: 6,
+                                             startColor: .black,
+                                             endColor: .green,
+                                             textColor: .white))
+                
+                Text("That is a prompt designed for somthing")
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.caption)
+            }
             
 
             Button("Register") {
