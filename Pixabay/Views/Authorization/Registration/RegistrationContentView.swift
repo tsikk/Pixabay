@@ -23,7 +23,7 @@ struct RegistrationContentView: View {
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
-                                             endColor: .white,
+                                             endColor: .blue,
                                              textColor: .white))
             
             SuperTextField(placeholder: Text("Enter your age"), text: $age)
@@ -31,7 +31,7 @@ struct RegistrationContentView: View {
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
-                                             endColor: .white,
+                                             endColor: .red,
                                              textColor: .white))
             
             
@@ -40,7 +40,7 @@ struct RegistrationContentView: View {
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
-                                             endColor: .white,
+                                             endColor: .yellow,
                                              textColor: .white))
             
             

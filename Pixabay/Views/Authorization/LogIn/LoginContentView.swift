@@ -32,7 +32,7 @@ struct LoginContentView: View {
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
-                                             endColor: .white,
+                                             endColor: .blue,
                                              textColor: .white))
 
                 SuperTextField(placeholder: Text("Enter your password"), text: $password)
@@ -40,7 +40,7 @@ struct LoginContentView: View {
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
                                              startColor: .black,
-                                             endColor: .white,
+                                             endColor: .yellow,
                                              textColor: .white))
 
             }
