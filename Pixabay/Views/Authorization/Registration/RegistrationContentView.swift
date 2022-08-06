@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct RegistrationContentView: View {
-    @State private var mail: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
     @State private var age: String = ""
+    @ObservedObject var viewModel: RegistrationViewModel
 
     var body: some View {
         
@@ -18,7 +19,7 @@ struct RegistrationContentView: View {
             
             Spacer()
             
-            SuperTextField(placeholder: Text("Enter your mail"), text: $mail)
+            SuperTextField(placeholder: Text("Enter your mail"), text: $email)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -46,7 +47,7 @@ struct RegistrationContentView: View {
             
 
             Button("Register") {
-                print("Tapped")
+                viewModel.onSignUp(email: email, age: age, password: password)
             }
             .buttonStyle(GrowingButton())
             
@@ -59,6 +60,6 @@ struct RegistrationContentView: View {
 
 struct RegistrationContentView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationContentView()
+        RegistrationContentView(viewModel: RegistrationViewModel() )
     }
 }
