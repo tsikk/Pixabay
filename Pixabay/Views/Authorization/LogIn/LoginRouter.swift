@@ -13,4 +13,9 @@ class LoginRouter: BaseRouting {
         let module = RegistrationAssembly.build()
         topViewController?.show(module, sender: self)
     }
+    
+    func openGallery() {
+        let module = GalleryAssembly.build()
+        topViewController?.show(module, sender: self)
+    }
 }

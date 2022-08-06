@@ -29,7 +29,7 @@ class LoginViewModel: BaseViewModel {
 
         auth.signIn(withEmail: email, password: password ) { result, error in
             guard result != nil, error == nil else { return }
-            
+            self.router.openGallery()
         }
     }
     
