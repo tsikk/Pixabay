@@ -17,6 +17,7 @@ struct GalleryAssembly {
         let view = GalleryContentView(viewModel: viewModel)
         let controller = BaseViewController<GalleryViewModel, GalleryContentView>(rootView: view)
         controller.viewModel = viewModel
+        controller.navigationItem.hidesBackButton = true 
         controller.title = "Gallery"
         return controller
     }
