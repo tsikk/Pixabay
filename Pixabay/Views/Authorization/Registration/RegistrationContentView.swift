@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct RegistrationContentView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
-    @State private var age: String = ""
     @ObservedObject var viewModel: RegistrationViewModel
 
     var body: some View {
@@ -22,7 +18,7 @@ struct RegistrationContentView: View {
             
             VStack(alignment: .leading) {
                 SuperTextField(placeholder: Text("Enter your mail"),
-                               text: $email)
+                               text: $viewModel.email)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -30,14 +26,15 @@ struct RegistrationContentView: View {
                                              endColor: .blue,
                                              textColor: .white))
                 
-                Text("That is a prompt designed for somthing")
+                Text(viewModel.emailPrompt)
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.caption)
+                    .foregroundColor(viewModel.isEmailValid() ? .black : .red)
             }
             
             VStack(alignment: .leading) {
                 SuperTextField(placeholder: Text("Enter your age"),
-                               text: $age)
+                               text: $viewModel.age)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -45,15 +42,16 @@ struct RegistrationContentView: View {
                                              endColor: .red,
                                              textColor: .white))
                 
-                Text("That is a prompt designed for somthing")
+                Text(viewModel.agePrompt)
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.caption)
+                    .foregroundColor(viewModel.isAgeValid() ? .black : .red)
             }
             
             
             VStack(alignment: .leading) {
             SuperTextField(placeholder: Text("Enter your password"),
-                           text: $password,
+                           text: $viewModel.password,
                            isSecure: true)
                 .foregroundColor(.white)
                 .accentColor(.white)
@@ -62,15 +60,16 @@ struct RegistrationContentView: View {
                                              endColor: .yellow,
                                              textColor: .white))
                 
-                Text("That is a prompt designed for somthing")
+                Text(viewModel.passwordPrompt)
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.caption)
+                    .foregroundColor((viewModel.passwordsMatch() && viewModel.isPasswordValid()) ? .black : .red)
             }
             
             
             VStack(alignment: .leading) {
             SuperTextField(placeholder: Text("Confirm yout password"),
-                           text: $confirmPassword,
+                           text: $viewModel.confirmPassword,
                            isSecure: true)
                 .foregroundColor(.white)
                 .accentColor(.white)
@@ -79,17 +78,18 @@ struct RegistrationContentView: View {
                                              endColor: .green,
                                              textColor: .white))
                 
-                Text("That is a prompt designed for somthing")
+                Text(viewModel.confirmPasswordPrompt)
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.caption)
+                    .foregroundColor((viewModel.passwordsMatch() && viewModel.isPasswordValid()) ? .black : .red)
             }
             
 
             Button("Register") {
-                viewModel.onSignUp(email: email, age: age, password: password)
+                viewModel.onSignUp()
             }
-            .buttonStyle(GrowingButton())
-            
+            .buttonStyle(GrowingButton(isSignUpComplete: viewModel.isSignUpComplete))
+
             Spacer()
         }
         .padding()

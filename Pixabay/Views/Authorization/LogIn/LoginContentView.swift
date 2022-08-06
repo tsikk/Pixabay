@@ -51,12 +51,12 @@ struct LoginContentView: View {
                 guard !email.isEmpty, !password.isEmpty else { return }
                 viewModel.onSignIn(email: email, password: password)
             }
-            .buttonStyle(GrowingButton())
+            .buttonStyle(GrowingButton(isSignUpComplete: true))
             
             Button("Register") {
                 viewModel.onRegisterButton()
             }
-            .buttonStyle(GrowingButton())
+            .buttonStyle(GrowingButton(isSignUpComplete: true))
             
             Spacer()
 

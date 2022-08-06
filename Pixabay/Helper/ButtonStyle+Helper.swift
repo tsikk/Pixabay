@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct GrowingButton: ButtonStyle {
+    
+    var isSignUpComplete: Bool
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(maxWidth: .infinity)
@@ -18,6 +21,8 @@ struct GrowingButton: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 1.08 : 1)
             .animation(.easeOut(duration: 0.2),
                        value: configuration.isPressed)
+            .opacity(isSignUpComplete ? 1 : 0.4)
+            .disabled(!isSignUpComplete)
     }
 }
 
