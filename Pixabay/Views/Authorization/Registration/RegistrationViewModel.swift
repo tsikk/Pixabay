@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import Firebase
 
 class RegistrationViewModel: BaseViewModel {
     
@@ -29,6 +30,17 @@ class RegistrationViewModel: BaseViewModel {
     func onSignUp() {
         auth.createUser(withEmail: email, password: password) { result, error  in
             guard result != nil, error == nil else { return }
+            
+            let db = Firestore.firestore()
+            
+            db.collection("users").addDocument(data: [
+                "age": self.age,
+                "email": self.email,
+                "uid": result!.user.uid
+            ]) { error in
+                print(error as Any)
+            }
+            
         }
     }
     
