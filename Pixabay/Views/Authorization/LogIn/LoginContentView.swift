@@ -9,8 +9,6 @@ import SwiftUI
 
 struct LoginContentView: View {
     @ObservedObject var viewModel: LoginViewModel
-    @State private var email: String = ""
-    @State private var password: String = ""
 
     var body: some View {
 
@@ -27,7 +25,7 @@ struct LoginContentView: View {
             
             VStack(spacing: 32) {
                 
-                SuperTextField(placeholder: Text("Enter your name"), text: $email)
+                SuperTextField(placeholder: Text("Enter your email"), text: $viewModel.email)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -35,7 +33,7 @@ struct LoginContentView: View {
                                              endColor: .blue,
                                              textColor: .white))
 
-                SuperTextField(placeholder: Text("Enter your password"), text: $password)
+                SuperTextField(placeholder: Text("Enter your password"), text: $viewModel.password, isSecure: true)
                 .foregroundColor(.white)
                 .accentColor(.white)
                 .modifier(customViewModifier(roundedCornes: 6,
@@ -48,8 +46,7 @@ struct LoginContentView: View {
             Spacer()
             
             Button("Enter") {
-                guard !email.isEmpty, !password.isEmpty else { return }
-                viewModel.onSignIn(email: email, password: password)
+                viewModel.onSignIn()
             }
             .buttonStyle(GrowingButton(isSignUpComplete: true))
             

@@ -10,6 +10,9 @@ import FirebaseAuth
 
 class LoginViewModel: BaseViewModel {
     
+    @Published var email: String = ""
+    @Published var password: String = ""
+    
     private let router = LoginRouter()
     let auth = Auth.auth()
      
@@ -21,7 +24,9 @@ class LoginViewModel: BaseViewModel {
         super.viewWillAppear(animated)
     }
     
-    func onSignIn(email: String, password: String)  {
+    func onSignIn()  {
+        guard !email.isEmpty, !password.isEmpty else { return }
+
         auth.signIn(withEmail: email, password: password ) { result, error in
             guard result != nil, error == nil else { return }
             
