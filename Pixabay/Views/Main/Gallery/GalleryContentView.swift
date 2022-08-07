@@ -12,6 +12,11 @@ struct GalleryContentView: View {
 
     var body: some View {
         listOfMovies
+            .toolbar {
+                Button("Sign Out") {
+                    viewModel.onSignOut()
+                }
+            }
     }
     
     private var listOfMovies: some View {

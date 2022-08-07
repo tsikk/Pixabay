@@ -13,4 +13,8 @@ class GalleryRouter: BaseRouting {
         let module = SelectedPhotoAssembly.build(with: data)
         topViewController?.show(module, sender: self)
     }
+    
+    func closeModule() {
+        anyTopController?.wrapped.dismiss(animated: true)
+    }
 }
