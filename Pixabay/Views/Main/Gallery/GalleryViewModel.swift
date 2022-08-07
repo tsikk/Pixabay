@@ -55,6 +55,5 @@ class GalleryViewModel: BaseViewModel {
         } catch let error {
             print(error)
         }
-        router.closeModule()
     }
 }

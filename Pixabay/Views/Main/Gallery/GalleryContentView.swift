@@ -9,12 +9,13 @@ import SwiftUI
 
 struct GalleryContentView: View {
     @ObservedObject var viewModel: GalleryViewModel
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         listOfMovies
             .toolbar {
                 Button("Sign Out") {
-                    viewModel.onSignOut()
+                    presentationMode.wrappedValue.dismiss()
                 }
             }
     }
