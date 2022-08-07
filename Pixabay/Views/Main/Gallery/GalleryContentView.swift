@@ -17,6 +17,7 @@ struct GalleryContentView: View {
                 Button("Sign Out") {
                     presentationMode.wrappedValue.dismiss()
                 }
+                .foregroundColor(.black)
             }
     }
     
