@@ -70,6 +70,7 @@
 		DC78EA87289E57C000C86F14 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DC78EA86289E57C000C86F14 /* FirebaseStorage */; };
 		DC78EA89289E57C000C86F14 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = DC78EA88289E57C000C86F14 /* FirebaseStorageCombine-Community */; };
 		DC78EA8B289E622000C86F14 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA8A289E622000C86F14 /* LoginRouter.swift */; };
+		DC78EA8D289F207C00C86F14 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78EA8C289F207C00C86F14 /* RegistrationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		DC78EA4F289DCC5D00C86F14 /* Textfield+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Textfield+Helper.swift"; sourceTree = "<group>"; };
 		DC78EA51289E543C00C86F14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DC78EA8A289E622000C86F14 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		DC78EA8C289F207C00C86F14 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 				DC78EA3F289DB98200C86F14 /* RegistrationViewModel.swift */,
 				DC78EA41289DB98B00C86F14 /* RegistrationAssembly.swift */,
 				DC78EA43289DB99700C86F14 /* RegistrationContentView.swift */,
+				DC78EA8C289F207C00C86F14 /* RegistrationRouter.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				DC78EA4E289DCC3E00C86F14 /* ViewModifier.swift in Sources */,
 				DC78EA0A289D566C00C86F14 /* RootAssembly.swift in Sources */,
 				DC78EA50289DCC5D00C86F14 /* Textfield+Helper.swift in Sources */,
+				DC78EA8D289F207C00C86F14 /* RegistrationRouter.swift in Sources */,
 				DC78E9EE289D4F8E00C86F14 /* AppDelegate.swift in Sources */,
 				DC78EA29289D613F00C86F14 /* GalleryModel.swift in Sources */,
 				DC78EA40289DB98200C86F14 /* RegistrationViewModel.swift in Sources */,

@@ -20,17 +20,17 @@ class RegistrationViewModel: BaseViewModel {
     @Published var passwordPrompt: String = "Password must be between 6 and 12 digits long and include at least one numeric digit"
     @Published var confirmPasswordPrompt: String = "Make sure password matches"
     @Published var agePrompt: String = "Age range is from 18 to 99"
-
-    enum TextFieldCondition {
-        case IsEmpty
-        case IsFinished
-    }
+    
+    private let router = RegistrationRouter()
+    
     let auth = Auth.auth()
 
     func onSignUp() {
         auth.createUser(withEmail: email, password: password) { result, error  in
             guard result != nil, error == nil else { return }
             
+            self.router.createAlertForSignUp(title: "Registered Succesfully")
+
             let db = Firestore.firestore()
             
             db.collection("users").addDocument(data: [

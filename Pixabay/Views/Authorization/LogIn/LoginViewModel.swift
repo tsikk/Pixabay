@@ -28,8 +28,11 @@ class LoginViewModel: BaseViewModel {
         guard !email.isEmpty, !password.isEmpty else { return }
 
         auth.signIn(withEmail: email, password: password ) { result, error in
-            guard result != nil, error == nil else { return }
-            self.router.openGallery()
+            if result != nil && error == nil {
+                self.router.openGallery()
+            } else {
+                self.router.createAlertForLogIn(title: "Your Email or Password is incorrect")
+            }
         }
     }
     

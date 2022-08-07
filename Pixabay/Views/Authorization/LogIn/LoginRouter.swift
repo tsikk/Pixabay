@@ -18,4 +18,18 @@ class LoginRouter: BaseRouting {
         let module = GalleryAssembly.build()
         topViewController?.show(module, sender: self)
     }
+    
+    func createAlertForLogIn(title: String) {
+        let alert = UIAlertController(title: title,
+                                      message: nil,
+                                      preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Retry",
+                                     style: .default)
+        
+        alert.addAction(okAction)
+        
+        anyTopController?.present(alert, animated: true)
+
+    }
 }
