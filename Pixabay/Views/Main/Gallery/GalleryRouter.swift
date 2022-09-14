@@ -13,4 +13,18 @@ class GalleryRouter: BaseRouting {
         let module = SelectedPhotoAssembly.build(with: data)
         topViewController?.show(module, sender: self)
     }
+    
+    func createAlert(title: String) {
+        let alert = UIAlertController(title: title,
+                                      message: nil,
+                                      preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok",
+                                     style: .default)
+        
+        alert.addAction(okAction)
+        
+        anyTopController?.present(alert, animated: true)
+
+    }
 }

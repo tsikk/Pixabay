@@ -7,12 +7,14 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 protocol GalleryServiceProtocol: AnyObject {
     var network: NetworkingProtocol { get }
 
     func getGallery() -> AnyPublisher<Gallery, Error>
     func getPhoto(id: String) -> AnyPublisher<Gallery, Error>
+    func getGalleryWithAF(completion: @escaping (Result<Gallery, AFError>) -> Void)
 }
 
 final class GalleryService: GalleryServiceProtocol {
@@ -39,4 +41,16 @@ final class GalleryService: GalleryServiceProtocol {
                            headers: endpoint.headers)
     }
     
+    func getGalleryWithAF(completion: @escaping (Result<Gallery, AFError>) -> Void) {
+        
+        AF.request(Endpoint.gallery.url)
+            .validate(statusCode: 200..<300)
+            .responseDecodable(of: Gallery.self) { response in
+                if let value = response.value {
+                    completion(.success(value))
+                } else if let error = response.error {
+                    completion(.failure(error))
+                }
+            }
+    }
 }

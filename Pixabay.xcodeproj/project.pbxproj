@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE31B9C528D1CA1C00532815 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE31B9C428D1CA1C00532815 /* Alamofire */; };
 		DC78E9EE289D4F8E00C86F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E9ED289D4F8E00C86F14 /* AppDelegate.swift */; };
 		DC78E9F0289D4F8E00C86F14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC78E9EF289D4F8E00C86F14 /* SceneDelegate.swift */; };
 		DC78E9F7289D4F8F00C86F14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC78E9F6289D4F8F00C86F14 /* Assets.xcassets */; };
@@ -134,6 +135,7 @@
 				DC78EA7B289E57C000C86F14 /* FirebaseInstallations in Frameworks */,
 				DC78EA83289E57C000C86F14 /* FirebaseRemoteConfig in Frameworks */,
 				DC78EA87289E57C000C86F14 /* FirebaseStorage in Frameworks */,
+				CE31B9C528D1CA1C00532815 /* Alamofire in Frameworks */,
 				DC78EA67289E57C000C86F14 /* FirebaseDatabase in Frameworks */,
 				DC78EA89289E57C000C86F14 /* FirebaseStorageCombine-Community in Frameworks */,
 				DC78EA3A289D906F00C86F14 /* Kingfisher in Frameworks */,
@@ -353,6 +355,7 @@
 				DC78EA84289E57C000C86F14 /* FirebaseRemoteConfigSwift */,
 				DC78EA86289E57C000C86F14 /* FirebaseStorage */,
 				DC78EA88289E57C000C86F14 /* FirebaseStorageCombine-Community */,
+				CE31B9C428D1CA1C00532815 /* Alamofire */,
 			);
 			productName = Pixabay;
 			productReference = DC78E9EA289D4F8E00C86F14 /* Pixabay.app */;
@@ -385,6 +388,7 @@
 			packageReferences = (
 				DC78EA38289D906F00C86F14 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				DC78EA53289E57C000C86F14 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE31B9C328D1CA1C00532815 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = DC78E9EB289D4F8E00C86F14 /* Products */;
 			projectDirPath = "";
@@ -652,6 +656,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE31B9C328D1CA1C00532815 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		DC78EA38289D906F00C86F14 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -671,6 +683,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE31B9C428D1CA1C00532815 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE31B9C328D1CA1C00532815 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		DC78EA39289D906F00C86F14 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DC78EA38289D906F00C86F14 /* XCRemoteSwiftPackageReference "Kingfisher" */;

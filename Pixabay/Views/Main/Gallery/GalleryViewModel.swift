@@ -6,14 +6,13 @@
 //
 
 import Foundation
-import Combine
 import Firebase
+import Alamofire
 
 class GalleryViewModel: BaseViewModel {
     
     @Published var photos = [Hits]()
     private let service: GalleryService
-    private var subscriptions = Set<AnyCancellable>()
     private let router = GalleryRouter()
 
     init(service: GalleryService) {
@@ -27,21 +26,16 @@ class GalleryViewModel: BaseViewModel {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        service.getGallery().sink(receiveCompletion: { completion in
-            switch completion {
-            case let .failure(error):
-                print("Couldn't get users: \(error)")
-            case .finished:
-                break
-            }
-        }) { gallery in
-            DispatchQueue.main.async {
+        service.getGalleryWithAF { result in
+            
+            switch result {
+            case .success(let gallery):
                 self.photos = gallery.hits
-                print(gallery)
+            case .failure(let error):
+                self.router.createAlert(title: error.errorDescription ?? "Unable to retrieve the data")
             }
         }
-        .store(in: &subscriptions)
-        
+
     }
 
     func selectPhoto(with id: Int) {
